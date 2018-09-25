@@ -1,0 +1,35 @@
+{
+  "name": "klarna-api",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:lint && npm run test:unit",
+    "test:lint": "NODE_ENV=test eslint .",
+    "test:unit": "NODE_ENV=test lab -Lv --coverage-exclude config --coverage-exclude node_modules --pattern 'test' modules",
+    "start:dev": "NODE_ENV=dev nodemon index -e js",
+    "start": "nodemon index",
+    "serve": "npm run start:dev"
+  },
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "chairo": "^4.0.0",
+    "glue": "^5.0.0",
+    "good": "^8.1.1",
+    "good-console": "^7.1.0",
+    "good-squeeze": "^5.0.2",
+    "hapi": "^17.4.0",
+    "raven": "^2.5.0"
+  },
+  "devDependencies": {
+    "code": "^5.2.0",
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "lab": "^15.4.1",
+    "lodash": "^4.17.5",
+    "nodemon": "^1.17.3"
+  }
+}
